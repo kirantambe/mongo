@@ -60,13 +60,13 @@ namespace mongo {
      update $push (append) operation
      various db.eval() type operations
 */
-const int BSONObjMaxUserSize = 16 * 1024 * 1024;
+const int BSONObjMaxUserSize = 32 * 1024 * 1024;
 
 /*
    Sometimes we need objects slightly larger - an object in the replication local.oplog
    is slightly larger than a user object for example.
 */
-const int BSONObjMaxInternalSize = BSONObjMaxUserSize + (16 * 1024);
+const int BSONObjMaxInternalSize = BSONObjMaxUserSize + (32 * 1024);
 
 const int BufferMaxSize = 64 * 1024 * 1024;
 
